@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/test.css">
+
+    <title>ああああ</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+
+
+</head>
+
+<body>
+
+  <!-- グリッチテスト -->
+  
+  
+
+  <!-- 星のエフェクト -->
+  <div class="stars">
+    
+    
+
+<!-- カーソル処理ここから -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15" result="goo" />
+        <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+      </filter>
+    </defs>
+  </svg>
+
+<div id="cursor" class="Cursor">
+</div>
+
+
+
+
+<!-- カーソル処理ここまで -->
+
+    <header>
+
+        <!-- ヘッダーコンテンツ -->
+        <div class="header-content">
+
+            <!-- タイトル -->
+            <div class="header-title-container">
+                <img class="headertitle-img" src="assets/title_neon.png" alt="(タイトル)堀江望恵のポートフォリオ">
+            </div>
+            
+            <!-- テストボタン -->
+            <!-- <div class="test-button">
+              <a class="obj-button" href="#">test</a>
+            </div> -->
+
+            <!-- <div class="link">
+            
+                <a href="#">作品１</a>
+                <a href="#">作品２</a>
+                <a href="#">作品３</a>
+    
+            </div> -->
+        </div>
+
+    </header>
+
+    <br>
+
+
+<section class="normal section">
+  <div class="container">
+    <!-- 見出し -->
+    <div class="headline-container">
+        <img class="headline-img" src="assets/Profile_neon.png" alt="(見出し)自己紹介">
+    </div>
+
+
+    <!-- イラスト -->
+    <!-- ダーツ -->
+  <a class="darts" href="#modal-02">
+    <img class="poyo" src="assets/darts3_neon.png" alt="(リンク)ダーツのイラスト">
+  </a>
+  <div class="modal-wrapper" id="modal-02">
+    <a href="#!" class="modal-overlay"></a>
+    <div class="modal-window">
+      <div class="modal-content">
+        <img src="assets/darts3_neon.png" width="80%">
+        <p>歴は約一年と短いですが、熱量は誰にも負けない自信があります</p>
+        <p>綺麗にハットトリックが決まった時の気持ち良さは言い表せないです！</p>
+        <p>ダーツ女子はかっこいい！！！！！(と思ってます！！)</p>
+      </div>
+      <a href="#!" class="modal-close">×</a>
+    </div>
+  </div>
+    <!-- 自分 -->
+  <a class="misato" href="#modal-00">
+    <img class="poyo" src="assets/misato_neon.png" alt="(リンク)堀江望恵の写真">
+  </a>
+  <div class="modal-wrapper" id="modal-00">
+    <a href="#!" class="modal-overlay"></a>
+    <div class="modal-window">
+      <div class="modal-content">
+        <img src="assets/misato_neon.png" width="75%">
+        <p>身長 : 152cm</p>
+        <p>体重 : ??kg</p>
+        <p>好きな食べ物:大きいもの</p>
+        <p>嫌いな食べ物:すぐなくなるもの</p>
+      </div>
+      <a href="#!" class="modal-close">×</a>
+    </div>
+  </div>
+    <!-- 酒 -->
+  <a class="sake" href="#modal-01">
+    <img class="poyo" src="assets/sake3_neon.png" alt="(リンク)お酒のイラスト">
+  </a>
+  <div class="modal-wrapper" id="modal-01">
+    <a href="#!" class="modal-overlay"></a>
+    <div class="modal-window">
+      <div class="modal-content">
+        <img src="assets/sake3_neon.png" width="80%">
+        <p>母とスカイビルに行ったときに撮ったものです</p>
+        <p>２本とも私一人で飲み干しております</p>
+        <p>普段よく飲むのは二階堂の水割りです♡</p>
+      </div>
+      <a href="#!" class="modal-close">×</a>
+    </div>
+  </div>
+
+
+    <p class="normal-text">
+        <span class="margin-right-80">名前</span>堀江望恵(ほりえみさと)<br>
+        <span class="margin-right-30">生年月日</span>2002年 12月 11日 (<span data-birth="2002-12-11"></span>)<br>
+        <span class="margin-right-80">趣味</span>ダーツ、お酒、ゲーム、食べること<br>
+        <span class="margin-right-60">スキル</span>C、C++、C#、DirectX11、UE5、HTML、CSS、<br>
+        <span class="margin-right-130"></span>Javascript、PHP、PowerPoint、Photoshop<br>
+        <br>
+        <br>
+        福岡生まれ宮崎育ち。<br>
+        HAL大阪に入学するタイミングで大阪市内にて一人暮らしをスタート<br>
+        ダーツとプログラムができる格好いい女性を目指し日々奮闘中の20歳です。<br>
+    </p>
+
+    <br>
+    <br>
+
+  </div>
+</section>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<section class="normal section">
+    <div class="container">
+
+      <!-- 見出し -->
+    <div class="headline-container">
+      <img class="headline-img" src="assets/Awards_neon.png" alt="(見出し)受賞歴">
+    </div>
+
+    <!-- 自分2 -->
+   <a class="misato2" href="#modal-03">
+    <img class="poyo" src="assets/darts_misato_neon.png" alt="(リンク)ダーツをする後ろ姿の堀江望恵">
+  </a>
+  <div class="modal-wrapper" id="modal-03">
+    <a href="#!" class="modal-overlay"></a>
+    <div class="modal-window">
+      <div class="modal-content">
+        <img src="assets/darts_misato_neon.png" width="50%">
+        <p>毎日ダーツができるようにダーツバーでアルバイトを始めました！</p>
+        <p>休日でもバイト先に投げに行くことが多いです</p>
+        <p></p>
+      </div>
+      <a href="#!" class="modal-close">×</a>
+    </div>
+  </div>
+
+  <!-- ケーキ -->
+  <a class="cake" href="#modal-04">
+    <img class="poyo" src="assets/cake_neon.png" alt="(リンク)長方形の大きいケーキ、お菓子がたくさん乗ってる">
+  </a>
+  <div class="modal-wrapper" id="modal-04">
+    <a href="#!" class="modal-overlay"></a>
+    <div class="modal-window">
+      <div class="modal-content">
+        <img src="assets/cake_neon.png" width="80%">
+        <p>「バカのケーキを作ろう！」と提案したら</p>
+        <p>6人集まってくれたクリスマスパーティー</p>
+        <p></p>
+      </div>
+      <a href="#!" class="modal-close">×</a>
+    </div>
+  </div>
+  
+
+      <p class="normal-text">
+        2021年 10月	未来のアイテム企画学内コンテスト 意欲賞 受賞<br>
+        <br>
+        2021年 10月	簡単、面白い！ゲーム学内コンテスト 意欲賞 受賞<br>
+        <br>
+        2022年 3月	HEW EVENT WEEK 構成力賞 受賞<br>
+        <br>
+        2023年 3月	HEW EVENT WEEK 技術力賞 受賞<br>
+      </p>
+    </div>
+  </section>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<br>
+
+
+
+
+<section class="side-scroll section">
+  <div class="side-scroll-container container">
+    
+      <!-- 見出し -->
+      <div class="headline-container">
+        <img class="headline-img" src="assets/works_neon.png" alt="(見出し)作品集">
+      </div>
+  
+    <div class="side-scroll-list-wrapper">
+      <ul class="side-scroll-list">
+        <li class="side-scroll-item">
+          <a href="https://drive.google.com/drive/folders/1i3aIkAxKsk3uKa-BTX1i12r2mXyWDKdz?usp=drive_link" target="_blank">
+            <img src="assets/Exprand.gif" alt="(作品)Exprand">
+            <p>エクスプランド</p>
+          </a>
+        </li>
+        <li class="side-scroll-item">
+          <a href="https://drive.google.com/drive/folders/1hHHBbyEtV_Gl4ofecebfzNsOaLlxF0Ro?usp=drive_link" target="_blank">
+            <img src="assets/guzuore.gif" alt="(作品)グズな俺が杖を振る">
+            <p>グズな俺が杖を振る</p>
+          </a>
+        </li>
+        <li class="side-scroll-item">掲載予定</li>
+        <li class="side-scroll-item">掲載予定</li>
+        <li class="side-scroll-item">掲載予定</li>
+        <li class="side-scroll-item">掲載予定</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<!-- フッター -->
+<footer>
+    <div class="footer-content">
+
+      <div class="footer-title">
+        <p>ここまでご覧いただきありがとうございました</p>
+        <p>何かお気づきの点や感想等がありましたら、是非下記のリンクからお願いいたします！</p>
+      </div>
+        
+      
+      <div class="footer-link">
+
+        <a href="https://forms.gle/P9r9rJQxaMjiMxyN8" target="_blank" class="buttonOutlineGradient">
+          <span class="buttonOutlineGradient_item">Google form</span>
+        </a>
+
+        <a href="mailto:misato3624@gmail.com"class="buttonOutlineGradient">
+          <span class="buttonOutlineGradient_item">Mail</span>
+        </a>
+
+      </div>
+        
+    </div>
+</footer>
+
+    
+
+</div>
+<!-- 星のエフェクトここまで -->
+
+<!-- ページトップボタン -->
+<a href="#" id="page-top">TOP</a>
+
+    
+
+  <!-- モーダルウィンドウのスクリプト -->
+  <script type="text/javascript" src="js/modalOpen.js"></script>
+
+  <!-- スクロールのスクリプト -->
+  <script type="text/javascript" src="js/test.js"></script>
+
+  <!-- マウスストーカーのスクリプト -->
+  <script type="text/javascript" src="js/mouseStalker.js"></script>
+
+  <!-- 星のエフェクトのスクリプト -->
+  <script type="text/javascript" src="js/makeStar.js"></script>
+
+  <!-- 年齢計算のスクリプト -->
+  <script type="text/javascript" src="js/ageCalculation.js"></script>
+  
+
+</body>
+</html>
