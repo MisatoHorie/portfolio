@@ -1,0 +1,563 @@
+/* フォント読み込み */
+@font-face {
+    font-family: 'Makinas-4-Flat-Subset';
+    src: url("../font/Makinas-4-Flat-Subset.woff") format('woff');
+  }
+
+/* スムーズスクロール */
+html {
+    scroll-behavior: smooth;
+  }
+
+  /* レイヤー指定 */
+p{
+    z-index: 10;
+  }
+  
+img{
+    z-index: 10;
+  }
+  
+.side-scroll{
+    z-index: 10;
+  }
+
+
+  /* 星のエフェクト */
+/* 星空の背景のスタイル */
+.stars {
+    z-index: 0;
+    position: relative;
+    width: 100%; /* 星空の横幅 */
+    overflow: hidden; /* 星が枠外にはみ出すのを防ぐ */
+  }
+  
+  /* 星のスタイル */
+  .star {
+    /* background-image:url(assets/star.png);  */
+    position: absolute;
+    display: block;
+    background-color: #ffffff; /*星の色*/
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px rgba(#fff, 0.5); /*星の影*/
+    opacity: 0;
+    animation: twinkle 5s infinite;
+  }
+  
+  /* 星がキラキラ光るアニメーション */
+  @keyframes twinkle {
+    0% {
+      opacity: 0;
+    }
+  
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+  }
+  /* 星のエフェクトここまで */
+  
+  /* スマホ閲覧を想定してマウスストーカーを非表示 */
+  svg{
+    display: none;
+  }
+  .Cursor {
+      display:none;
+  }
+
+  * {
+    /* cursor: none; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* メディアクエリ設定 */
+/* iPhone 縦 */
+ 
+
+/*　for iPhone Landscape　(iPhone 横)　*/
+@media screen and (min-width:480px) { 
+    
+ 
+}
+
+
+
+  
+  ul,
+  li {
+    list-style: none;
+  }
+
+  
+  
+  body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Makinas-4-Flat-Subset';
+    font-weight: 400;
+    background-image: url("../assets/background4.png");
+    background-attachment: fixed;
+    background-size: cover;
+    
+    background-position-x: center;
+  }
+
+  /* ヘッダー */
+ 
+  /* ヘッダータイトル画像 */
+  .headertitle-img{
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: auto;
+    padding: 2%;
+    padding-top: 5%;
+  }
+
+  /* ヘッダーリンク */
+.link{
+    text-align: right;
+    display: inline-block;
+  }
+
+  /* フッター */
+  footer{
+    height: 200px;
+    background-color: rgba(0, 0, 0, 1);
+    text-align: center;
+    z-index: 998;
+  }
+
+  .footer-content{
+    padding:30px
+  }
+
+  footer p{
+    font-size: 20px;
+    color:#d5d5d5;
+  }
+
+  .footer-link a{
+    display: inline-block;
+    margin:20px;
+  }
+
+/* フッターのボタン */
+/* ボタンのスタイル */
+.buttonOutlineGradient {
+  text-decoration:none;
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: 64px;
+  padding: 2px;
+  font-family: sans-serif;
+  font-size: 18px;
+  text-align: center;
+  overflow-wrap: anywhere;
+  background: linear-gradient(135deg, #6fa24a, #15a1cc);
+  border-radius: 32px; /* (buttonの高さ / 2) の値 */
+}
+
+.buttonOutlineGradient::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: linear-gradient(135deg, #6fa24a, #15a1cc);
+  filter: blur(10px);
+  border-radius: 32px; /* (buttonの高さ / 2) の値 */
+  opacity: 0;
+}
+
+.buttonOutlineGradient_item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: #222;
+  border-radius: 32px; /* (buttonの高さ / 2) の値 */
+}
+
+@media (any-hover: hover) {
+  .buttonOutlineGradient::before {
+    transition: opacity 0.2s;
+    will-change: filter;
+  }
+
+  .buttonOutlineGradient:hover::before {
+    opacity: 1;
+  }
+}
+/* フッターのボタンここまで */
+
+
+   /* 見出し画像 */
+
+   .headline-container{
+    text-align: left;
+  }
+
+   .headline-img{
+    position: relative;
+    top: 50px;
+    width: 38%;
+    height: auto;
+  }
+  
+  /* 共通 */
+  .section {
+    width: 100%;
+    padding: 0px 0;
+    margin:100px 0px;
+  }
+
+  .container {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  /* 作品集のタイトル文字 */
+  .heading {
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+  
+  /* タイトル */
+  .title {
+    padding: 40px 0 20px;
+    font-size: 52px;
+    text-align: center;
+  }
+
+  /* みさとの画像 */
+  .misato img{
+    position: absolute;
+    top: -130px;
+    left: 10px;
+    width: 50%;
+    height: auto;
+    transform: scale(1) rotate(0deg);
+    transition: filter 0.3s;
+  }
+  .misato img:hover{
+    filter: brightness(1.2);
+    animation: poyo0 .6s;
+  }
+  /* 酒の画像 */
+  .sake img{
+    position: absolute;
+    bottom: -115px;
+    left: 10px;
+    width: 46%;
+    height: auto;
+    transform: scale(1) rotate(0deg);
+    transition: filter 0.3s;
+  }
+  .sake img:hover{
+    filter: brightness(1.2);
+    animation: poyo1 .6s;
+  }
+
+  /* ダーツの画像 */
+  .darts img{
+    position: absolute;
+    right: 10px;
+    top: -119px;
+    width: 46%;
+    height: auto;
+    transform: scale(1) rotate(0deg);
+    transition: filter 0.3s;
+  }
+  .darts img:hover{
+    filter: brightness(1.2);
+    animation: poyo2 .6s;
+  }
+
+  /* みさと2の画像 */
+  .misato2 img{
+    position: absolute;
+    top:-30px;
+    right:70px;
+    width: 22%;
+    height: auto;
+    transform: scale(1) rotate(0deg);
+    transition: filter 0.3s;
+  }
+  .misato2 img:hover{
+    filter: brightness(1.2);
+    animation: poyo0 .6s;
+  }
+
+  /* ケーキの画像 */
+  .cake img{
+    position: absolute;
+    bottom:10px;
+    left:25px;
+    width: 17%;
+    height: auto;
+    transform: scale(1) rotate(0deg);
+    transition: filter 0.3s;
+  }
+  .cake img:hover{
+    filter: brightness(1.2);
+    animation: poyo0 .6s;
+  }
+
+  
+  /* 画像のアニメーション */
+  @keyframes poyo0 {
+    from, to { transform: scale(1) rotate(0deg); }
+    10% { transform: scale(1.2) rotate(0deg); }
+    40% { transform: scale(.9) rotate(0deg); }
+    60% { transform: scale(1.04) rotate(0deg); }
+    80% { transform: scale(.98) rotate(0deg); }
+  }
+
+  @keyframes poyo1 {
+    from, to { transform: scale(1) rotate(0deg); }
+    10% { transform: scale(1.2) rotate(0deg); }
+    40% { transform: scale(.9) rotate(0deg); }
+    60% { transform: scale(1.04) rotate(0deg); }
+    80% { transform: scale(.98) rotate(0deg); }
+  }
+
+  @keyframes poyo2 {
+    from, to { transform: scale(1) rotate(0deg); }
+    10% { transform: scale(1.2) rotate(0deg);; }
+    40% { transform: scale(.9) rotate(0deg);; }
+    60% { transform: scale(1.04) rotate(0deg);; }
+    80% { transform: scale(.98) rotate(0deg);; }
+  }
+
+
+  /* セクションに背景を付けたい */
+  .section{
+    background-image: url("../assets/gridLine_shadow_sp.png");
+    background-size: 100% 95%;
+    background-repeat:no-repeat;
+    background-position: center;
+    position:relative;
+  }
+  
+  
+  /* 普通のセクション */
+  .normal-text {
+    text-shadow: 1px 1px 4px #000000;
+    font-weight: 500;
+    font-size: 17px;
+    letter-spacing: 0.05em;
+    margin-top: 60px;
+    /* backdrop-filter: blur(12px); */
+}
+
+  /* 横スクロールセクション */
+  .side-scroll {
+    background-color: #1b171780;
+    background-image: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+
+  .side-scroll.section{
+    padding-bottom: 0px;
+  }
+  
+
+  .side-scroll-list-wrapper {
+    position: relative;
+    width: 100%;
+    height: 550px;
+  }
+  
+  .side-scroll-list {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    display: flex;
+    gap: 0 60px;
+  }
+  
+  /* 横並びの作品の箱 */
+  .side-scroll-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 32px;
+    min-width: 300px;
+    transition: all 0.3s;
+  }
+  .side-scroll-item:hover{
+    transform: scale(1.06);
+    filter: brightness(1.2);
+  }
+
+    /* 横スクロールセクションの作品文字 */
+    .side-scroll-item p{
+      font-size: 25px;
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .side-scroll-item a{
+      text-decoration: none;
+      color: #fff;
+    }
+    
+
+  /* 横並び作品画像 */
+  .side-scroll-item img{
+    box-shadow: 0px 0px 25px 5px rgb(255, 255, 255);
+    width:500px;
+    height:auto;
+  }
+
+  .side-scroll-item
+
+  
+  .side-scroll-item + .side-scroll-item {
+    margin-left: 60px;
+  }
+
+
+  .dartcontent-Comment p{
+    font-size: 50px;
+    text-align: center;
+  }
+
+/* モーダル */
+.modal-wrapper {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 60px 10px;
+  text-align: center
+}
+
+.modal-wrapper:not(:target) {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s, visibility .3s;
+}
+
+.modal-wrapper:target {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .4s, visibility .4s;
+}
+
+.modal-wrapper::after {
+  display: inline-block;
+  height: 100%;
+  margin-left: -.05em;
+  vertical-align: middle;
+  content: ""
+}
+
+.modal-wrapper .modal-window {
+  box-sizing: border-box;
+  display: inline-block;
+  z-index: 999;
+  position: relative;
+  width: 70%;
+  max-width: 800px;
+  padding: 30px 30px 15px;
+  border-radius: 2px;
+  background: none;
+  box-shadow: none;
+  vertical-align: middle
+}
+
+.modal-wrapper .modal-window .modal-content {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-overlay {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .8)
+}
+
+.modal-wrapper .modal-close {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+  color: #ffffff !important;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 35px;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0
+}
+
+.modal-wrapper .modal-close:hover {
+  color: #a2a2a2 !important
+}
+
+.modal-content p{
+  font-size: 20px;
+}
+/* モーダルCSS */
+
+
+/***追従するトップへ戻るボタン***/
+#page-top {
+  position: fixed;
+  right: 5px;
+  bottom: 20px;
+  height: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transform: rotate(90deg);
+  font-size: 120%;
+  line-height: 1.5rem;
+  color: #ffff00;
+  padding: 0 0 0 35px;
+  border-top: solid 3px;
+}
+#page-top::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2.5px;
+  left: 0px;
+  width: 15px;
+  border-top: solid 3px;
+  transform: rotate(35deg);
+  transform-origin: left top;
+}
+/***トップへ戻るボタンここまで***/
