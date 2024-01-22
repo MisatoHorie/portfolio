@@ -296,20 +296,57 @@ svg {
     text-align: center;
   }
 
-  /* みさとの画像 */
-  .misato img{
-    position: absolute;
-    top:-30px;
-    right:240px;
-    width: 23%;
-    height: auto;
-    transform: scale(1) rotate(0deg);
-    transition: filter 0.3s;
+  /* セクション上下の画像 */
+  .imgContent{
+    position: relative;
+
+    /* 自分の写真 */
+    & .misato{
+      position: absolute;
+      width: 320px;
+      top: -45px;
+      right: 160px;
+      transform: scale(1) rotate(0deg);
+      transition: filter 0.3s;
+
+      &:hover{
+        filter: brightness(1.2);
+        animation: poyo0 .6s;
+      }
+    }
+
+    /* ダーツの写真 */
+    & .darts{
+      position: absolute;
+      width: 245px;
+      top: 155px;
+      right: 60px;
+      transform: scale(1) rotate(0deg);
+      transition: filter 0.3s;
+
+      &:hover{
+        filter: brightness(1.2);
+        animation: poyo2 .6s;
+      }
+    }
+
+    /* ビールの写真 */
+    & .sake{
+      position: absolute;
+      width: 19%;
+      top: -100px;
+      left: 42px;
+      transform: scale(1) rotate(0deg);
+      transition: filter 0.3s;
+
+      &:hover{
+        filter: brightness(1.2);
+        animation: poyo2 .6s;
+      }
+    }
   }
-  .misato img:hover{
-    filter: brightness(1.2);
-    animation: poyo0 .6s;
-  }
+
+
   /* 酒の画像 */
   .sake img{
     position: absolute;
@@ -325,20 +362,7 @@ svg {
     animation: poyo1 .6s;
   }
 
-  /* ダーツの画像 */
-  .darts img{
-    position: absolute;
-    right:30px;
-    top:120px;
-    width: 21%;
-    height: auto;
-    transform: scale(1) rotate(0deg);
-    transition: filter 0.3s;
-  }
-  .darts img:hover{
-    filter: brightness(1.2);
-    animation: poyo2 .6s;
-  }
+  
 
   /* みさと2の画像 */
   .misato2 img{
