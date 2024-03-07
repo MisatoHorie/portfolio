@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 
 <html lang="ja">
-  
+
 <head>
     <meta charset="UTF-8">
 
     <!-- ビューポート -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- css -->
+    <link rel="stylesheet" href="css/common.css">
     <!-- メディアクエリ -->
     <link rel="stylesheet" href="css/sp.css" media="screen and (max-width:768px)">
     <link rel="stylesheet" href="css/tablet.css" media="screen and (min-width:768px) and ( max-width:1024px)">
     <link rel="stylesheet" href="css/pc.css" media="screen and (min-width:1024px)">
+
+    <!-- ブラウザ用アイコン -->
+    <link rel="icon" href="assets/neonHert.png">
 
     <!-- タイトル -->
     <title>Portfolio</title>
@@ -48,8 +53,11 @@
       </div>
     </header>
 
+    <!-- きらきらする星の画像 -->
+    <!-- <figure class="starlight"><img src="assets/hosi.png" alt=""></figure> -->
+
     <!-- 画像コンテナ１ -->
-    <div class="imgContent">
+    <figure class="imgContent">
       <!-- ダーツ画像小 -->
       <a href="#modal-02">
         <img class="poyo darts" src="assets/darts3_neon.png" alt="(リンク)ダーツのイラスト">
@@ -58,7 +66,7 @@
       <a href="#modal-00">
         <img class="poyo misato" src="assets/misato_neon.png" alt="(リンク)堀江望恵の写真">
       </a>  
-    </div>
+    </figure>
 
     <!-- セクション１(プロフィール) -->
     <section class="normal section">
@@ -85,7 +93,7 @@
     <!-- 画像コンテナ２ -->
     <div class="imgContent">
       <!-- お酒 -->
-      <a href="#modal-02">
+      <a href="#modal-01">
         <img class="poyo sake" src="assets/sake3_neon.png" alt="(リンク)お酒の画像">
       </a>
     </div>
@@ -111,14 +119,16 @@
 
     <!-- 画像コンテナ３ -->
     <div class="imgContent">
-      <!-- ダーツ画像大 -->
-      <a class="misato2" href="#modal-03">
-        <img class="poyo" src="assets/darts_misato_neon.png" alt="(リンク)ダーツをする後ろ姿の堀江望恵">
-      </a>
+
       <!-- ケーキ -->
-      <a class="cake" href="#modal-04">
-        <img class="poyo" src="assets/cake_neon.png" alt="(リンク)長方形の大きいケーキ、お菓子がたくさん乗ってる">
+      <a href="#modal-04">
+        <img class="poyo cake" src="assets/cake_neon.png" alt="(リンク)長方形の大きいケーキ、お菓子がたくさん乗ってる">
       </a>
+      <!-- ダーツ画像大 -->
+      <a href="#modal-03">
+        <img class="poyo misato2" src="assets/darts_misato_neon.png" alt="(リンク)ダーツをする後ろ姿の堀江望恵">
+      </a>
+      
     </div>
 
     <!-- セクション３(作品集) -->
@@ -247,9 +257,6 @@
   <!-- ページトップボタン -->
   <a href="#" id="page-top">TOP</a>
 
-  <!-- モーダルウィンドウのスクリプト -->
-  <script type="text/javascript" src="js/modalOpen.js"></script>
-
   <!-- スクロールのスクリプト -->
   <script type="text/javascript" src="js/test.js"></script>
 
@@ -261,6 +268,10 @@
 
   <!-- 年齢計算のスクリプト -->
   <script type="text/javascript" src="js/ageCalculation.js"></script>
+
+  <!-- バブルボタンのスクリプト -->
+  <script type="text/javascript" src="js/bubblyButton.js"></script>
+  
 
 </body>
 

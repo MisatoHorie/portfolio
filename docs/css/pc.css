@@ -1,64 +1,4 @@
-
-/* スムーズスクロール */
-html {
-  scroll-behavior: smooth;
-}
-
-/* レイヤー */
-p{
-  z-index: 10;
-  /* background-color: rgba(0, 0, 0, 0.3); */
-}
-
-img{
-  z-index: 10;
-}
-
-.side-scroll{
-  z-index: 10;
-}
-
-/* 星のエフェクト */
-/* 星空の背景のスタイル */
-.stars {
-  z-index: 0;
-  position: relative;
-  width: 100%; /* 星空の横幅 */
-  overflow: hidden; /* 星が枠外にはみ出すのを防ぐ */
-}
-
-/* 星のスタイル */
-.star {
-  /* background-image:url(assets/star.png);  */
-  position: absolute;
-  display: block;
-  background-color: #ffffff; /*星の色*/
-  border-radius: 50%;
-  box-shadow: 0 0 10px 5px rgba(#fff, 0.5); /*星の影*/
-  opacity: 0;
-  animation: twinkle 5s infinite;
-}
-
-/* 星がキラキラ光るアニメーション */
-@keyframes twinkle {
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    transform: scale(1.1);
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-    transform: scale(1);
-  }
-}
-/* 星のエフェクトここまで */
-
 /* マウスストーカー */
-
 svg {
   display: none;
 }
@@ -86,20 +26,10 @@ svg {
   transform-origin: center center;
   transform: translate(-50%, -50%);
 }
-
-.test-button{
-  text-align: center;
-  width:30%;
-  height:100px
-}
-.test-button a{
-  display: block;
-  background-color: #ffff00;
-}
-
 /* マウスストーカー ここまで */
 
 
+/* 自己紹介の空白用 */
 .margin-right-30{
     margin-right: 30px;
 }
@@ -113,49 +43,13 @@ svg {
     margin-right: 130px;
 }
 
-* {
-    /* cursor: none; */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  
-  ul,
-  li {
-    list-style: none;
-  }
-
-  /* フォント読み込み */
-  @font-face {
-    font-family: 'Makinas-4-Flat-Subset';
-    src: url("../font/Makinas-4-Flat-Subset.woff") format('woff');
-  }
-  
-  body {
-    background-color: #000000;
-    color: #ffffff;
-    /* font-family: 'DotGothic16', sans-serif; */
-    font-family: 'Makinas-4-Flat-Subset';
-    font-weight: 500;
-    background-image: url("../assets/background4.png");
-    background-attachment: fixed;
-    background-size: cover;
-    background-size: 100% auto;
-  }
-
   /* ヘッダー */
   header{
-    /* position: fixed; */
     top: 0;
     right: 0;
     width: 100%;
     z-index: 998;
   }
-
-  
 
   /* ヘッダータイトル */
   .header-title-container{
@@ -254,9 +148,7 @@ svg {
 }
 /* フッターのボタンここまで */
 
-
    /* 見出し画像 */
-
    .headline-container{
     text-align: center;
   }
@@ -272,7 +164,12 @@ svg {
   .section {
     width: 100%;
     padding: 100px 0;
-    margin:0px 0px;
+    margin:0px 0px 40px 0px;
+    background-image: url("../assets/gridLine_shadow.png");
+    background-size: 85% 95%;
+    background-repeat:no-repeat;
+    background-position: center;
+    position:relative;
   }
 
   .container {
@@ -288,15 +185,24 @@ svg {
     letter-spacing: 0.05em;
     text-align: center;
   }
-  
-  /* タイトル */
-  .title {
-    padding: 40px 0 20px;
-    font-size: 52px;
-    text-align: center;
+
+  /* 星の画像 */
+  .starlight{
+    animation: flashing 4s infinite;
+  }
+  @keyframes flashing{
+    0%{
+      opacity: 1;
+    }
+    70%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
   }
 
-  /* セクション上下の画像 */
+  /* セクション間の画像 */
   .imgContent{
     position: relative;
 
@@ -333,9 +239,9 @@ svg {
     /* ビールの写真 */
     & .sake{
       position: absolute;
-      width: 19%;
-      top: -100px;
-      left: 42px;
+      width: 270px;
+      top: 8px;
+      left: 93px;
       transform: scale(1) rotate(0deg);
       transition: filter 0.3s;
 
@@ -344,55 +250,40 @@ svg {
         animation: poyo2 .6s;
       }
     }
-  }
 
+    /* ダーツ画像大 */
+    & .misato2{
+      position: absolute;
+      right: 30px;
+      width: 260px;
+      height: auto;
+      transform: scale(1) rotate(0deg);
+      transition: filter 0.3s;
+      bottom: 50px;
 
-  /* 酒の画像 */
-  .sake img{
-    position: absolute;
-    bottom:10px;
-    left:50px;
-    width: 16%;
-    height: auto;
-    transform: scale(1) rotate(0deg);
-    transition: filter 0.3s;
-  }
-  .sake img:hover{
-    filter: brightness(1.2);
-    animation: poyo1 .6s;
-  }
+      &:hover{
+        filter: brightness(1.2);
+        animation: poyo0 .6s;
+      }
+    }
 
+    /* ケーキ */
+    & .cake{
+      position: absolute;
+      bottom: 45px;
+      width: 230px;
+      height: auto;
+      transform: scale(1) rotate(0deg);
+      transition: filter 0.3s;
+      right: 222px;
+
+      &:hover{
+        filter: brightness(1.2);
+        animation: poyo0 .6s;
+      }
+    }
+  }
   
-
-  /* みさと2の画像 */
-  .misato2 img{
-    position: absolute;
-    top:-30px;
-    right:70px;
-    width: 22%;
-    height: auto;
-    transform: scale(1) rotate(0deg);
-    transition: filter 0.3s;
-  }
-  .misato2 img:hover{
-    filter: brightness(1.2);
-    animation: poyo0 .6s;
-  }
-
-  /* ケーキの画像 */
-  .cake img{
-    position: absolute;
-    bottom:10px;
-    left:25px;
-    width: 17%;
-    height: auto;
-    transform: scale(1) rotate(0deg);
-    transition: filter 0.3s;
-  }
-  .cake img:hover{
-    filter: brightness(1.2);
-    animation: poyo0 .6s;
-  }
 
   
   /* 画像のアニメーション */
@@ -421,15 +312,6 @@ svg {
   }
 
 
-  /* セクションに背景を付けたい */
-  .section{
-    background-image: url("../assets/gridLine_shadow.png");
-    background-size: 85% 95%;
-    background-repeat:no-repeat;
-    background-position: center;
-    position:relative;
-  }
-  
   
   /* 普通のセクション */
   .normal-text {
@@ -450,12 +332,9 @@ svg {
     align-items: center;
   }
 
-  
-
   .side-scroll.section{
     padding-bottom: 0px;
   }
-  
 
   .side-scroll-list-wrapper {
     position: relative;
@@ -518,117 +397,3 @@ svg {
     font-size: 50px;
     text-align: center;
   }
-
-/* モーダル */
-.modal-wrapper {
-  z-index: 999;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 60px 10px;
-  text-align: center
-}
-
-.modal-wrapper:not(:target) {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .3s, visibility .3s;
-}
-
-.modal-wrapper:target {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity .4s, visibility .4s;
-}
-
-.modal-wrapper::after {
-  display: inline-block;
-  height: 100%;
-  margin-left: -.05em;
-  vertical-align: middle;
-  content: ""
-}
-
-.modal-wrapper .modal-window {
-  box-sizing: border-box;
-  display: inline-block;
-  z-index: 999;
-  position: relative;
-  width: 70%;
-  max-width: 800px;
-  padding: 30px 30px 15px;
-  border-radius: 2px;
-  background: none;
-  box-shadow: none;
-  vertical-align: middle
-}
-
-.modal-wrapper .modal-window .modal-content {
-  max-height: 80vh;
-  overflow-y: auto;
-}
-
-.modal-overlay {
-  z-index: 999;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, .8)
-}
-
-.modal-wrapper .modal-close {
-  z-index: 999;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 35px;
-  color: #ffffff !important;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 35px;
-  text-align: center;
-  text-decoration: none;
-  text-indent: 0
-}
-
-.modal-wrapper .modal-close:hover {
-  color: #a2a2a2 !important
-}
-
-.modal-content p{
-  font-size: 20px;
-}
-/* モーダルCSS */
-
-
-/***追従するトップへ戻るボタン***/
-#page-top {
-  position: fixed;
-  right: 5px;
-  bottom: 20px;
-  height: 50px;
-  text-decoration: none;
-  font-weight: bold;
-  transform: rotate(90deg);
-  font-size: 120%;
-  line-height: 1.5rem;
-  color: #ffff00;
-  padding: 0 0 0 35px;
-  border-top: solid 3px;
-}
-#page-top::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: -2.5px;
-  left: 0px;
-  width: 15px;
-  border-top: solid 3px;
-  transform: rotate(35deg);
-  transform-origin: left top;
-}
-/***トップへ戻るボタンここまで***/

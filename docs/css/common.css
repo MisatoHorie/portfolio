@@ -1,0 +1,206 @@
+* {
+    /* cursor: none; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* スムーズスクロール */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  /* レイヤー */
+  p{
+    z-index: 10;
+  }
+  
+  img{
+    z-index: 10;
+  }
+  
+  .side-scroll{
+    z-index: 10;
+  }
+  
+  /* 星のエフェクト */
+  /* 星空の背景のスタイル */
+  .stars {
+    z-index: 0;
+    position: relative;
+    width: 100%; /* 星空の横幅 */
+    overflow: hidden; /* 星が枠外にはみ出すのを防ぐ */
+  }
+  
+  /* 星のスタイル */
+  .star {
+    /* background-image:url(assets/star.png);  */
+    position: absolute;
+    display: block;
+    background-color: #ffffff; /*星の色*/
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px rgba(#fff, 0.5); /*星の影*/
+    opacity: 0;
+    animation: twinkle 5s infinite;
+  }
+  
+  /* 星がキラキラ光るアニメーション */
+  @keyframes twinkle {
+    0% {
+      opacity: 0;
+    }
+  
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+  }
+  /* 星のエフェクトここまで */
+
+  /* フォント読み込み */
+  @font-face {
+    font-family: 'Makinas-4-Flat-Subset';
+    src: url("../font/Makinas-4-Flat-Subset.woff") format('woff');
+  }
+  
+  body {
+    background-color: #000000;
+    color: #ffffff;
+    /* font-family: 'DotGothic16', sans-serif; */
+    font-family: 'Makinas-4-Flat-Subset';
+    font-weight: 500;
+    background-image: url("../assets/background4.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-size: 100% auto;
+  }
+
+  /* モーダル */
+.modal-wrapper {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 60px 10px;
+  text-align: center
+}
+
+.modal-wrapper:not(:target) {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s, visibility .3s;
+}
+
+.modal-wrapper:target {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .4s, visibility .4s;
+}
+
+.modal-wrapper::after {
+  display: inline-block;
+  height: 100%;
+  margin-left: -.05em;
+  vertical-align: middle;
+  content: ""
+}
+
+.modal-wrapper .modal-window {
+  box-sizing: border-box;
+  display: inline-block;
+  z-index: 999;
+  position: relative;
+  width: 70%;
+  max-width: 800px;
+  padding: 30px 30px 15px;
+  border-radius: 2px;
+  background: none;
+  box-shadow: none;
+  vertical-align: middle
+}
+
+.modal-wrapper .modal-window .modal-content {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-overlay {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .8)
+}
+
+.modal-wrapper .modal-close {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+  color: #ffffff !important;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 35px;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0
+}
+
+.modal-wrapper .modal-close:hover {
+  color: #a2a2a2 !important
+}
+
+.modal-content p{
+  font-size: 20px;
+}
+/* モーダルここまで */
+  
+/***追従するトップへ戻るボタン***/
+#page-top {
+  position: fixed;
+  right: 5px;
+  bottom: 20px;
+  height: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transform: rotate(90deg);
+  font-size: 120%;
+  line-height: 1.5rem;
+  color: #ffff00;
+  padding: 0 0 0 35px;
+  border-top: solid 3px;
+}
+#page-top::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2.5px;
+  left: 0px;
+  width: 15px;
+  border-top: solid 3px;
+  transform: rotate(35deg);
+  transform-origin: left top;
+}
+#page-top::before {
+  display: none;
+  top: -35%;
+  background-image: radial-gradient(circle, #d53fff 10%, transparent 20%), radial-gradient(circle, transparent 10%, #d53fff 20%, transparent 30%), radial-gradient(circle, #d53fff 10%, transparent 20%), radial-gradient(circle, #d53fff 10%, transparent 20%), radial-gradient(circle, transparent 5%, #d53fff 15%, transparent 20%), radial-gradient(circle, #ffd635 10%, transparent 20%), radial-gradient(circle, #ffd635 10%, transparent 20%), radial-gradient(circle, #ffd635 10%, transparent 20%), radial-gradient(circle, #ffd635 10%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+#page-top.animate::before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+/***トップへ戻るボタンここまで***/
